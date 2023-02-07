@@ -1,12 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './Components/Navbar';
+//Importaciones
+import Router from './Router.js';
+
+
 
 function App() {
   return (
     <div className="App">
-      
-      
+      <Router></Router>
     </div>
   );
 }
