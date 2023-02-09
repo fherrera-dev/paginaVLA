@@ -84,3 +84,74 @@ main{
 .container > .card{
     border: none;
 }
+
+.card > i{
+    width: 150px;
+}
+
+#modal-video1{
+    width: 200px;
+}
+
+.modal-content{
+    /* margin: 0 auto !important; */
+    width: 500px;
+    height: 500px;
+}
+
+.videos-alumnos{
+    display: flex;
+}
+
+.videopersonas{
+    margin: 10px;
+    border-radius: 10px;
+    height: 200px !important;
+}
+
+.carousel,table{
+    margin-top: 81px;
+}
+
+.carousel-item > img{
+    height: 550px;
+}
+
+
+/*Libreria avanzada CSS Animaciones*/
+
+.animated{
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast{
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.fadein{
+    animation-name: fadein;
+}
+
+
+
+tbody tr td{
+    text-align: left !important;
+}
