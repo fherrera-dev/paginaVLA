@@ -62,7 +62,8 @@ main{
 }
 
 .card{
-    overflow: hidden;
+    width: 350px !important;
+    padding: 15px;
 }
 
 .card-deck{
@@ -85,9 +86,7 @@ main{
     border: none;
 }
 
-.card > i{
-    width: 150px;
-}
+
 
 #modal-video1{
     width: 200px;
@@ -125,4 +124,12 @@ tbody tr td{
 .frm{
     /* background-color: rgba(0, 0, 0, 0.8);
     padding: 20px; */
+}
+
+.seg-cursos{
+    width: auto;
+    margin: auto auto !important;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }

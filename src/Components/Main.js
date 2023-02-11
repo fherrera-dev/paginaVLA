@@ -8,6 +8,9 @@ import curso_para_ninos from '../../src/assets/imagenes/cursos-para-niños.jpg';
 import beneficio_en_vivo from '../../src/assets/imagenes/Virtual-Classsrooms-in-Distance-Learning.png';
 import beneficio_cerfificaciones from '../../src/assets/imagenes/certificaciones.png';
 import beneficio_trabajos from '../../src/assets/imagenes/job-search.png';
+import 'animate.css';
+import ScrollAnimation from 'react-animate-on-scroll';
+
 
 class Main extends Component {
     state = {  } 
@@ -30,17 +33,25 @@ class Main extends Component {
 
                 </div>
 
-                <div className=''>
+                
 
-                <div>
-                    <h1 className='animate__animated animate__bounceIn'>
+                <div><br/><br/>
+                    <ScrollAnimation animateIn='fadein'>
+                    <h1>
                     TU CAMINO HACIA EL ÉXITO
                     </h1>
+                    </ScrollAnimation>
+
+                    <ScrollAnimation animateIn='fadeInUp'>
                     <h3>con clases 100% virtuales en vivo...</h3>
                     <h4>Nuestros Cursos</h4>
+                    </ScrollAnimation>
                 </div>
-                    <h1 class="animate__animated animate__bounceIn">LKJASDFLKDFGFSDGFD</h1>
+
+                <div className='seg-cursos'>   
+
                 <div className='card-deck'>
+                <ScrollAnimation animateIn='fadeInLeft'>   
                 <div className="card" >
                     <img src={curso_tecnologia} class="card-img-top" alt="..."/>
                     <div className="card-body">
@@ -49,7 +60,9 @@ class Main extends Component {
                         <a class="btn btn-primary">Ver más...</a>
                     </div>
                 </div> 
+                </ScrollAnimation> 
 
+                <ScrollAnimation animateIn='fadeInLeft'>
                 <div className="card" >
                     <img src={curso_idiomas} class="card-img-top" alt="..."/>
                     <div className="card-body">
@@ -58,7 +71,9 @@ class Main extends Component {
                         <a class="btn btn-primary">Ver más...</a>
                     </div>
                 </div> 
+                </ScrollAnimation>
 
+                <ScrollAnimation animateIn='fadeInRight'>
                 <div className="card" >
                     <img src={curso_gerencial} class="card-img-top" alt="..."/>
                     <div className="card-body">
@@ -67,7 +82,9 @@ class Main extends Component {
                         <a class="btn btn-primary">Ver más...</a>
                     </div>
                 </div> 
+                </ScrollAnimation>
 
+                <ScrollAnimation animateIn='fadeInRight'>
                 <div className="card" >
                     <img src={curso_para_ninos} class="card-img-top" alt="..."/>
                     <div className="card-body">
@@ -76,20 +93,30 @@ class Main extends Component {
                         <a class="btn btn-primary">Ver más...</a>
                     </div>
                 </div> 
-
+                </ScrollAnimation>
 
                 </div>
-
+                </div>
                 <div className='citas-vla'>
                     <br/>
-                    <h2>¿Por qué elegir a VLA?</h2>
+                    
+                    <ScrollAnimation animateIn='fadeInLeft'>
+                    <h1>
+                    ¿Por qué elegir a VLA?
+                    </h1>
+                    </ScrollAnimation>
+
+                    <ScrollAnimation animateIn='fadeIn'>
                     <p>Aquí vamos un paso más allá y te damos asistencia para conseguir un nuevo empleo, preparándote para trabajar directamente con algunas de las empresas más importantes del mundo. </p>
                     <p>Con VLA adquieres habilidades profesionales, certificados y títulos en línea. </p>
                     <br/>
                     <hr/>
-                    <h2>BENEFICIOS</h2>
+                    
+                    </ScrollAnimation>
                 </div>
 
+                <ScrollAnimation animateIn='zoomIn'>
+                <h2>BENEFICIOS</h2>
                 <div className='card-deck container'>
                     <div className="card" >
                         <div>
@@ -119,8 +146,8 @@ class Main extends Component {
                     </div>
 
                 </div>
-
-                </div>
+                </ScrollAnimation>
+                
                     <h2>Lo que nuestros estudiantes dicen de VLA</h2>
                 <div className='videos-alumnos container'>
                     <ReactPlayer url='https://www.youtube.com/watch?v=Y-0B0wIGPeY' className='videopersonas' controls={true} />
