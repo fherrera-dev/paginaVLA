@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import axios, { Axios } from 'axios';
+import Formulario from './Formulario';
 
 class Empleados extends Component {
     state = { 
@@ -19,10 +20,8 @@ class Empleados extends Component {
         return (
 
             <Fragment>
-
-                <p>Componente Listado</p>
-                <table className='table'> 
-                        <thead>
+            <table className="table">    
+                <thead>
                             <tr>
                                 <td>Id</td>
                                 <td>Nombre</td>
@@ -33,11 +32,12 @@ class Empleados extends Component {
                             </tr>
                             
                         </thead>
+                        
 
 
                     {/* Opcion 2 */}
                     {this.state.users.map(data =>
-                    <tbody>
+                    
                         <tr>
                             <td>{data.id}</td>
                             <td>{data.name}</td>
@@ -46,17 +46,14 @@ class Empleados extends Component {
                             <td>{data.phone}</td>
                             <td>{data.address.city}</td>
                         </tr>
-                    </tbody>
+                  
+
+                  
                         
                     )}
 
-
-                </table> 
-
-
-
-
-
+            </table>
+                
             </Fragment>
 
         );
