@@ -1,6 +1,8 @@
 import React,{Fragment, useState} from "react";
 import { useForm } from "react-hook-form";
 //import Empleados from "./Empleados";
+import 'animate.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 const Formulario = () => {

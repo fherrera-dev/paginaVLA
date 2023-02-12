@@ -9,6 +9,8 @@ import curso_tecnologia from '../../src/assets/imagenes/curso-tecnologia.jpg';
 import curso_idiomas from '../../src/assets/imagenes/curso-idiomas.jpg';
 import curso_gerencial from '../../src/assets/imagenes/cursos-gerenciales.jpg';
 import curso_para_ninos from '../../src/assets/imagenes/cursos-para-niños.jpg';
+import 'animate.css';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 
 class Cursos extends Component {
@@ -75,7 +77,7 @@ class Cursos extends Component {
                 </div>
 
                 <div class="container mt-3">
-                    <h2 className='fadein'>Mira nuestro catálogo de Cursos</h2>
+                    <h2>Mira nuestro catálogo de Cursos</h2>
                     <br/>
                     {/* <!-- Nav tabs --> */}
                     <ul class="nav nav-tabs">
