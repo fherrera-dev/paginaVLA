@@ -108,7 +108,7 @@ main{
     height: 200px !important;
 }
 
-.carousel, .frm ,table{
+.carousel, .margenNav, .frm ,table{
     margin-top: 81px;
 }
 
@@ -132,4 +132,34 @@ tbody tr td{
     align-items: center;
     align-content: center;
     text-align: center;
+}
+
+.videoContacto{
+    height: 500px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.frm{
+    color: #ff7900 !important;
+}
+
+.frm-contacto{
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.line-hr{
+    height: 1px;
+    background-color: #ff7900;
+    width: 100%;
+}
+#accordion, .card,.card-header,.card-link
+,.card-body{
+    width: 100% !important;
+}
+
+.card-body{
+    text-align: left !important;
 }
