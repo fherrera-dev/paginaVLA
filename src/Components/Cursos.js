@@ -22,13 +22,16 @@ import curso_portugues from '../../src/assets/imagenes/curso-portugues.jpeg';
 import curso_espanol from '../../src/assets/imagenes/curso-espanol.jpg';
 
 import 'animate.css';
-import ScrollAnimation from 'react-animate-on-scroll';
+import ReactPlayer from 'react-player';
 
 
 
 class Cursos extends Component {
     state = {  } 
-    render() { 
+    render() {
+
+       
+        
         return (
             <Fragment>
                 <div className='animate__animated animate__fadeIn'>
@@ -126,9 +129,15 @@ class Cursos extends Component {
                                     <h5 className='labPrecio'><strong>Precio:</strong></h5>
                                     <h5 className='montoPrecio'><strong>$400</strong></h5>
                                 </div>
-                                <a class="btn btn-primary">Ver más...</a>
+                                
+                               
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
+
+                               
 
                         <div className="card" >
                             <img src={curso_python} class="card-img-top" alt="..."/>
@@ -299,7 +308,57 @@ class Cursos extends Component {
                         </div>    */}
 
                         </div>
+
+                            
                     </div>
+                    <div class="modal fade" id="myModal">
+                                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                                    <div class="modal-content">
+                                    
+                                        {/* <!-- Modal Header --> */}
+                                        <div class="modal-header">
+                                        <h4 class="modal-title">información del Curso</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        
+                                        {/* <!-- Modal body --> */}
+                                        <div class="modal-body">
+                                        <div className=''>
+                                        <ReactPlayer 
+                                        url='https://www.youtube.com/watch?v=FE0mRn400ak'
+                                        className='react-player'
+                                        width='100%'
+                                        height='200px' />
+                                         </div>
+                                        <div className='duracionModal'>
+                                        <div className='precio'>
+                                            <h5 className='labPrecio'><strong>Duración:</strong></h5>
+                                            <h5 className='montoPrecio'><strong>7 meses</strong></h5>
+                                        </div>
+                                        </div>
+                                            <h5>Lo que aprenderás</h5>
+                                            <ul>
+                                                <li>Todas las tecnologías necesarias para ser un Web Developer Front-End</li>
+                                            </ul>
+                                            <h5>Requerimientos</h5>
+                                            <ul>
+                                                <li>Computadora o teléfono con conexión a Internet</li>
+                                                <li>Conocimientos básicos de computación</li>
+                                            </ul>
+                                            <h5>Sobre este curso</h5>
+                                            <ul><li>El Master en Web Devolper es un programa pensado para personas que deseen adquirir 
+                                                habilidades competentes a un desarrollador Front-End.</li></ul>
+                                        </div>
+                                        
+                                        {/* <!-- Modal footer --> */}
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Solicitar información</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                        </div>
+                                        
+                                    </div>
+                                    </div>
+                                </div>
                     </div>
             </Fragment>
         );

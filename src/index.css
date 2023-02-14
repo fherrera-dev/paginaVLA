@@ -209,4 +209,11 @@ tbody tr td{
     text-align: right !important;
 }
 
+.modal{
+    text-align: left !important;
+}
 
+.duracionModal{
+    width: 40%;
+    margin: 0 auto;
+}
