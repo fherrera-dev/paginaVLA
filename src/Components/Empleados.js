@@ -1,6 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import axios, { Axios } from 'axios';
-import Formulario from './Formulario';
+//import { DataGrid } from '@mui/x-data-grid';
+import Box from '@mui/material/Box';
+import { DataGrid } from '@mui/x-data-grid';
 
 class Empleados extends Component {
     state = { 
@@ -15,6 +17,8 @@ class Empleados extends Component {
             this.setState({users});
         })
     }
+
+    
     
     render() { 
         return (

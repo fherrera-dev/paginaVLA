@@ -8,6 +8,7 @@ import Acerca from './Components/Acerca';
 import Contacto from './Components/Contacto';
 import Empleados from './Components/Empleados';
 import Formulario from './Components/Formulario';
+import ListaEmpleados from './Components/ListaEmpleados';
 
 class Router extends Component {
     state = {  } 
@@ -21,6 +22,8 @@ class Router extends Component {
                     <Route exact path="/Contacto" component={Contacto}></Route>
                     <Route exact path="/Empleados" component={Empleados}></Route>
                     <Route exact path="/Frm" component={Formulario}></Route>
+                    <Route exact path="/ListaEmpleados" component={ListaEmpleados}></Route>
+                    
                     {/* <Route exact path="/Contador" component={Contador}></Route> */}
                    
                     

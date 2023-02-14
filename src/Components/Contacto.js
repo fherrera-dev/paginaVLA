@@ -1,14 +1,28 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment,useRef } from 'react';
 import ReactPlayer from 'react-player';
 import 'animate.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 import TextField from '@mui/material/TextField';
+import emailjs from '@emailjs/browser';
 
 
 
-class Contacto extends Component {
-    state = {  } 
-    render() { 
+export const Contacto = () => {
+    const form = useRef();
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+        
+      emailjs.sendForm('service_o2vchzl', 'template_z04l6wv', form.current, 'KUlKc0KpYO5FazR2g')
+        .then((result) => {
+            console.log(result.text);
+            e.target.reset();
+            alert("Se ha enviado el correo")
+            
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
         return (
             <Fragment>
 
@@ -44,18 +58,18 @@ class Contacto extends Component {
                     </h3>
                     <hr className='line-hr'/>
 
-                    <form >
+                    <form ref={form} onSubmit={sendEmail} name="frmContacto">
                     <div>
-                    <TextField id="filled-basic" className="form-control" label="Nombre" variant="filled" />
+                    <TextField id="filled-basic" className="form-control" label="Nombre" variant="filled" name='nombre' />
                     </div><br/>
                     <div>
-                    <TextField id="filled-basic" className="form-control" label="Correo" type="email" variant="filled" />
+                    <TextField id="filled-basic" className="form-control" label="Correo" type="email" variant="filled" name='email' />
                     </div><br/>
                     <div>
-                    <TextField id="filled-basic" className="form-control" label="Teléfono" variant="filled" />
+                    <TextField id="filled-basic" className="form-control" label="Teléfono" variant="filled" name='telefono'/>
                     </div><br/>
                     <div>
-                    <TextField id="filled-basic" className="form-control" label="País" variant="filled" />
+                    <TextField id="filled-basic" className="form-control" label="País" variant="filled" name='pais' />
                     </div><br/>
                     <div>
                     <TextField
@@ -65,6 +79,7 @@ class Contacto extends Component {
                     rows={4}
                     className="form-control"
                     variant="filled"
+                    name='message'
                     />
                     </div><br/><br/><br/><br/>
 
@@ -79,69 +94,65 @@ class Contacto extends Component {
                             <div class="card-body" >
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value=""/>Master Front End Web Developer
+                                    <input type="checkbox" class="form-check-input" value="Master Front End Web Developer" name='TEC1'/>Master Front End Web Developer
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value=""/>Marketing Digital
+                                    <input type="checkbox" class="form-check-input" value="Marketing Digital" name='TEC2'/>Marketing Digital
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Cisco
+                                    <input type="checkbox" class="form-check-input" value="Cisco value" name='TEC3' />Cisco
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Bootcamp Cisco CCNA
+                                    <input type="checkbox" class="form-check-input" value="Bootcamp Cisco CCNA" name='TEC4' />Bootcamp Cisco CCNA
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Linux Administrator
+                                    <input type="checkbox" class="form-check-input" value="Linux Administrator" name='TEC5' />Linux Administrator
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Amazon Web Services Cloud Practitioner
+                                    <input type="checkbox" class="form-check-input" value="Amazon Web Services Cloud Practitioner" name='TEC6'/>Amazon Web Services Cloud Practitioner
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Amazon Web Services Architect
+                                    <input type="checkbox" class="form-check-input" value="Amazon Web Services Architect" name='TEC7'/>Amazon Web Services Architect
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Microsoft SQL
+                                    <input type="checkbox" class="form-check-input" value="Microsoft SQL" name='TEC8'/>Microsoft SQL
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Microsoft Azure
+                                    <input type="checkbox" class="form-check-input" value="Microsoft Azure" name='TEC9'/>Microsoft Azure
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Ciberseguridad
+                                    <input type="checkbox" class="form-check-input" value="Ciberseguridad" name='TEC10'/>Ciberseguridad
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Programación Python 
+                                    <input type="checkbox" class="form-check-input" value="Programación Python" name='TEC11'/>Programación Python 
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Virtualización VMWare 
+                                    <input type="checkbox" class="form-check-input" value="Virtualización VMWare" name='TEC12'/>Virtualización VMWare 
                                 </label>
                                 </div>
-                                <div class="form-check">
-                                <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Cisco 
-                                </label>
-                                </div>
+                               
                             </div>
                         </div>
                         </div>
@@ -155,17 +166,17 @@ class Contacto extends Component {
                             <div class="card-body">
                             <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Inglés Laboral 
+                                    <input type="checkbox" class="form-check-input" value="Inglés Laboral" name='IDI1'/>Inglés Laboral 
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Inglés para Niños A1 | A2
+                                    <input type="checkbox" class="form-check-input" value="Inglés para Niños A1 | A2" name='IDI2'/>Inglés para Niños A1 | A2
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Portugués Integral
+                                    <input type="checkbox" class="form-check-input" value="Portugués Integral" name='IDI3'/>Portugués Integral
                                 </label>
                                 </div>
                             </div>
@@ -181,27 +192,27 @@ class Contacto extends Component {
                             <div class="card-body">
                             <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Gerencia de Proyectos
+                                    <input type="checkbox" class="form-check-input" value="Gerencia de Proyectos" name='GER1' />Gerencia de Proyectos
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Microsoft Excel Básico | Intermedio | Avanzado
+                                    <input type="checkbox" class="form-check-input" value="Microsoft Excel Básico | Intermedio | Avanzado" name='GER2' />Microsoft Excel Básico | Intermedio | Avanzado
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Lean Six Sigma Yellow Belt
+                                    <input type="checkbox" class="form-check-input" value="Lean Six Sigma Yellow Belt" name='GER3'/>Lean Six Sigma Yellow Belt
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />Scrum Master Professional
+                                    <input type="checkbox" class="form-check-input" value="Scrum Master Professional" name='GER4'/>Scrum Master Professional
                                 </label>
                                 </div>
                                 <div class="form-check">
                                 <label class="form-check-label">
-                                    <input type="checkbox" class="form-check-input" value="" />ITIL v4
+                                    <input type="checkbox" class="form-check-input" value="ITIL v4" name='GER5' />ITIL v4
                                 </label>
                                 </div>
                             </div>
@@ -220,6 +231,6 @@ class Contacto extends Component {
             </Fragment>
             
     )}
-}
+
  
 export default Contacto;
