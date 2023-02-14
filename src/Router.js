@@ -22,7 +22,7 @@ class Router extends Component {
                     <Route exact path="/About" component={Acerca}></Route>
                     <Route exact path="/Contacto" component={Contacto}></Route>
                     <Route exact path="/Empleados" component={Empleados}></Route>
-                    <Route exact path="/Frm" component={Formulario}></Route>
+                    <Route exact path="/Estudiantes" component={Formulario}></Route>
                     <Route exact path="/ListaEmpleados" component={ListaEmpleados}></Route>
                     
                     {/* <Route exact path="/Contador" component={Contador}></Route> */}

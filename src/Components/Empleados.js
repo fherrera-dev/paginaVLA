@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import axios, { Axios } from 'axios';
-//import { DataGrid } from '@mui/x-data-grid';
-import Box from '@mui/material/Box';
-import { DataGrid } from '@mui/x-data-grid';
+import 'animate.css';
 
 class Empleados extends Component {
     state = { 
@@ -24,7 +22,12 @@ class Empleados extends Component {
         return (
 
             <Fragment>
-            <table className="table">    
+
+                    <div className='margenNav'></div>
+                    <h1 className='text-orange animate__animated animate__fadeIn'>
+                    Lista del Team VLA
+                    </h1>
+            <table className="table animate__animated animate__fadeIn">    
                 <thead>
                             <tr>
                                 <td>Id</td>
@@ -57,7 +60,7 @@ class Empleados extends Component {
                     )}
 
             </table>
-                
+             
             </Fragment>
 
         );

@@ -1,13 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import ReactPlayer from 'react-player';
 
 class Acerca extends Component {
     state = {  } 
     render() { 
         return (
-            <div>
+            <Fragment>
+                <div>
+                <div className='margenNav'></div>
+                <div className='videoPrincipal'>
+                    <ReactPlayer 
+                    url='https://www.youtube.com/watch?v=dt63H3UPaXU'
+                    className=''
+                    playing
+                    
+                    controls={true}
+                    width='100%'
+                    height='100%'
+                    
+                    
+                    />
 
-                <p>Acerca</p>
-            </div>
+                </div>
+                </div>
+            </Fragment>
         );
     }
 }

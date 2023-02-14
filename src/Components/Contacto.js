@@ -221,7 +221,7 @@ export const Contacto = () => {
                         </div>{/* fin accordion */}
                         
                         <br/>
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <button class="btn btn-primary" type="submit">Contactar</button>
                     </form>
                     
 

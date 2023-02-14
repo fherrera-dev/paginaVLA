@@ -116,7 +116,7 @@ class Cursos extends Component {
                     <div class="tab-content animate__animated animate__fadeInUp">
                         <div id="tech" class="container tab-pane active"><br/>
                         <h3>Cursos de Tecnología</h3>
-                        <p>Lorem  magna aliqua.</p>
+                        <p>Mejora tus habilidades...</p>
                         <div className='card-column'>
                         <div className="card" >
                             <img src={curso_web} class="card-img-top" alt="..."/>
@@ -142,27 +142,51 @@ class Cursos extends Component {
                         <div className="card" >
                             <img src={curso_python} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos de Idiomas</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Programación Python</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$500</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
                         <div className="card" >
                             <img src={curso_cisco} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos Gerenciales</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Cisco CCNA</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$800</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
                         <div className="card" >
                             <img src={curso_linux} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos para Niños</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Servidores Linux</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$350</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
@@ -173,42 +197,74 @@ class Cursos extends Component {
                         </div>
 
                         <div id="idioma" class="container tab-pane fade"><br/>
-                        <h3>Menu 1</h3>
-                        <p>Ut enim ad minim .</p>
+                        <h3>Cursos de Ingles</h3>
+                        <p>Mejora tus habilidades...</p>
                         <div className='card-column'>
                         <div className="card" >
                             <img src={curso_ingles} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos de Tecnología</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Inglés</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$300</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
                         <div className="card" >
                             <img src={curso_ingles_para_ninos} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos de Idiomas</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Inglés para niños</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$300</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
                         <div className="card" >
                             <img src={curso_portugues} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos Gerenciales</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Portugués</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$400</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
                         <div className="card" >
                             <img src={curso_espanol} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Curso de Español</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Español</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$400</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
@@ -218,43 +274,75 @@ class Cursos extends Component {
 
 
                         <div id="gerencia" class="container tab-pane fade"><br/>
-                        <h3>Menu 2</h3>
-                        <p>Sed ut perspiciatis unde omnis .</p>
+                        <h3>Cursos Gerenciales</h3>
+                        <p>Mejora tus habilidades...</p>
 
                         <div className='card-column'>
                         <div className="card" >
                             <img src={curso_excel} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos de Tecnología</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Excel</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$150</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
                         <div className="card" >
                             <img src={curso_marketing} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos de Idiomas</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Marketing Digital</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$420</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
                         <div className="card" >
                             <img src={curso_scrummaster} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos Gerenciales</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">Scrum Master</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$200</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
                         <div className="card" >
                             <img src={curso_itilv4} class="card-img-top" alt="..."/>
                             <div className="card-body">
-                                <h5 className="card-title">Cursos para Niños</h5>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a class="btn btn-primary">Ver más...</a>
+                                <h5 className="card-title">ITIL v4</h5>
+                                <p className="card-text">
+                                <small class="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content..</small>
+                                </p>
+                                <div className='precio'>
+                                    <h5 className='labPrecio'><strong>Precio:</strong></h5>
+                                    <h5 className='montoPrecio'><strong>$270</strong></h5>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Ver más...</button>
+                                {/* <!-- The Modal --> */}
+                                
                             </div>
                         </div> 
 
@@ -265,7 +353,7 @@ class Cursos extends Component {
 
                         <div id="ninos" class="container tab-pane fade"><br/>
                         <h3>Menu 2</h3>
-                        <p>Sed ut perspiciatis unde omnis .</p>
+                        <p>Mejora tus habilidades...</p>
 
                         {/* <div className='card-column'>
                         <div className="card" >

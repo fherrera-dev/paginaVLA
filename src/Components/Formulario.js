@@ -22,15 +22,35 @@ const Formulario = () => {
         e.target.reset()
     }
 
-
-
     return ( 
         <Fragment>
+            <br/>
+            <div className="container">
             <div className="frm">
-            <h2>Registro de Empleados</h2>
+            <h2>Registro de Estudiantes</h2>
+            <br/>
             <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-row">
-                <div className="col-md-6 col-sm-12 mb-3">
+            <div className="col-md-4 col-sm-12 mb-3">
+                    <label >Cedula:</label>
+                        <input 
+                            name="cedula"
+                            className="form-control form-control-sm" type="text"  
+                            placeholder="Ingresa su cédula..."
+                            //validacion --registro nombre
+                            {...register("cedula",{
+                                required:{value:true,message:"Este campo es requerido."},
+                                minLength:{value:9,message:"La cédula tiene que ser de minimo 9 digitos"}
+                            })}
+                        />
+                        {
+                            errors.cedula &&
+                            <div className="alert alert-danger mt-1p-1">
+                                {errors.cedula.message}
+                            </div>
+                        }
+                </div>
+                <div className="col-md-4 col-sm-12 mb-3">
                     <label >Nombre:</label>
                         <input 
                             name="nombre"
@@ -39,7 +59,7 @@ const Formulario = () => {
                             //validacion --registro nombre
                             {...register("nombre",{
                                 required:{value:true,message:"Este campo es requerido."},
-                                minLength:{value:2,message:"El nombre tiene que ser más grande..."}
+                                minLength:{value:3,message:"El nombre tiene que ser mínimo 3 letras..."}
                             })}
                         />
                         {
@@ -50,7 +70,7 @@ const Formulario = () => {
                         }
                 </div>
 
-                <div className="col-md-6 mb-3">
+                <div className="col-md-4 mb-3">
                     <label >Usuario:</label>
                         <input 
                             name="usuario"
@@ -69,10 +89,10 @@ const Formulario = () => {
                             </div>
                         }
                 </div>
-                </div>   
+            </div>   
 
                 <div className="form-row">
-                <div className="col-md-6 mb-3">
+                <div className="col-md-4 mb-3">
                     <label >Email:</label>
                         <input 
                             name="email"
@@ -92,7 +112,7 @@ const Formulario = () => {
                         }
                 </div>
 
-                <div className="col-md-3 mb-3">
+                <div className="col-md-4 mb-3">
                     <label >Teléfono:</label>
                         <input 
                             name="telefono"
@@ -112,7 +132,7 @@ const Formulario = () => {
                         }
                 </div>
 
-                <div className="col-md-3 mb-3">
+                <div className="col-md-4 mb-3">
                     <label >Ciudad:</label>
                         <input 
                             name="ciudad"
@@ -134,7 +154,7 @@ const Formulario = () => {
 
 
                 </div>         
-                <button className="btn btn-success" type="submit">Submit form</button>       
+                <button className="btn btn-primary" type="submit">Agregar Estudiante</button>       
 
             </form>
 
@@ -142,7 +162,7 @@ const Formulario = () => {
             <table className="table">
                     <thead>
                         <tr>
-                            <td>Id</td>
+                            <td>Cédula</td>
                             <td>Nombre</td>
                             <td>Usuario</td>
                             <td>Email</td>
@@ -154,7 +174,7 @@ const Formulario = () => {
                 {Personas.map(data =>
 
                         <tr>
-                            <td>11</td>
+                            <td>{data.cedula}</td>
                             <td>{data.nombre}</td>
                             <td>{data.usuario}</td>
                             <td>{data.email}</td>
@@ -165,7 +185,7 @@ const Formulario = () => {
                 </tbody>
                
                </table> 
-           
+               </div>
 
         </Fragment>
 
