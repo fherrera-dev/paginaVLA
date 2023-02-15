@@ -43,7 +43,7 @@ class Navbar extends Component {
     <NavLink className="nav-link" to="/Contacto">Contacto</NavLink>
     </li>
     <li>
-    <NavLink className="nav-link" to="/About">Acerca</NavLink>
+    <NavLink className="nav-link" to="/About">Acerca de VLA</NavLink>
     </li>
   </ul>
   <form className="d-flex form-inline my-2 my-lg-0">

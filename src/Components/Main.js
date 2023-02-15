@@ -8,6 +8,7 @@ import curso_para_ninos from '../../src/assets/imagenes/cursos-para-niños.jpg';
 import beneficio_en_vivo from '../../src/assets/imagenes/Virtual-Classsrooms-in-Distance-Learning.png';
 import beneficio_cerfificaciones from '../../src/assets/imagenes/certificaciones.png';
 import beneficio_trabajos from '../../src/assets/imagenes/job-search.png';
+
 import 'animate.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 

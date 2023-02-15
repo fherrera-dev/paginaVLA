@@ -32,7 +32,7 @@ export const Contacto = () => {
                     <div className='container'>
                     
                     <div className='animate__animated animate__fadeIn'>
-                        <h2>Inicia tu camino al Éxito!!<br/> Contactenos para recibir más información.</h2>
+                        <h2 className='text-grey'>Inicia tu camino al Éxito!!<br/> Contactenos para recibir más información.</h2>
                         <div className='videoContacto'>
                         <ReactPlayer 
                         url='https://www.youtube.com/watch?v=QqicjIydT4c'
@@ -53,7 +53,7 @@ export const Contacto = () => {
                     
                     <div className='frm-contacto'>
                     
-                    <h3 className='animate__animated animate__fadeIn'>
+                    <h3 className='animate__animated animate__fadeIn text-grey'>
                         Damos tus datos y cursos de interes
                     </h3>
                     <hr className='line-hr'/>
